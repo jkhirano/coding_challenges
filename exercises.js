@@ -43,8 +43,8 @@ console.log(firstFactorial(18));
 // var ahhh = 'this is fricken hard';
 
 // function letterCapitalize(str){
-    // return str.upperCase();
-    // return str.charAt(0).toUpperCase() + str.slice(1) FIRST 
+// return str.upperCase();
+// return str.charAt(0).toUpperCase() + str.slice(1) FIRST 
 // }
 
 var ahhh = 'this is fricken hard';
@@ -60,6 +60,35 @@ console.log(letterCapitalize(ahhh));
 
 // Function rangeRover(arr)
 // The function will take an array of two numbers and return the sum of those two numbers AND all numbers between them.  The lowest number will not always come first.  For example rangeRover([1, 4]) should return 10, i.e.(1 + 2 + 3 + 4), rangeRover([4, 1]) should also return 10.
+
+// FIRST ATTEMPT:
+// var num = [2, 4];
+
+// function rangeRover(arr){
+//     if (arr[0] === arr[0]){
+//          return arr[0];
+//      }else{
+//      return arr[1] + rangeRover(arr[1]-1);
+//      }
+// }
+
+//  console.log(rangeRover(num));
+
+function rangeRover(arr){
+    var array = [1, 4];
+    var arrayA = array[0]; // 1
+    var arrayB = array[1]; // 4
+    var arrayC = 0;
+
+    while (arrayA <= arrayB){ // LOOPS THROUGH BLOCK OF CODE
+        arrayC = arrayC + arrayA;
+        arrayA += 1;
+    }
+    return arrayC;
+}
+
+console.log(rangeRover([4, 1]));
+// console.log(rangeRover(array)); // DIDN'T WORK - ARRAY IS NOT DEFINED?
 
 // Function missingLetter(str)
 // The function will find the missing letter passed in the parameter and return it.  If all letters are present in the string, the return will be undefined.  For example missingLetter("abce") should return "d", missingLetter("bcd") should return undefined.
